@@ -12,10 +12,33 @@ class Player:
     # Define an __str__() instance method.
     def __str__(self):
         return("This player currently has {} gold, {} health points, and {} lives remaining.".format(self.gold_coins,self.health_points,self.lives))
-# Your class should have an instance method called level_up that increases lives by one.
-# Your class should have an instance method called collect_treasure that increases gold_coins by one. If gold_coins is a multiple of ten (eg, 10, 20, 30, and so on) then the collect_treasure method should run the level_up method.
+
+    # Your class should have an instance method called level_up that increases lives by one.
+    def level_up(self):
+        self.lives += 1
+
+    # Your class should have an instance method called collect_treasure that increases gold_coins by one. If gold_coins is a multiple of ten (eg, 10, 20, 30,
+    #and so on) then the collect_treasure method should run the level_up method.
+    def collect_treasure(self):
+        self.gold_coins += 1
+        if self.gold_coins % 10 == 0:
+            self.level_up()
 # Your class should have an instance method called do_battle that accepts one damage argument and subtracts it from the player's health_points. If health_points falls below one, subtract one from lives and reset health_points to ten. If you have run out of lives, this method should run another method called restart (see below).
 # The restart instance method should set all attributes back to their starting values (5, 0, and 10).
 
 p1 = Player()
+print(p1)
+p1.level_up()
+print(p1)
+p1.collect_treasure()
+p1.collect_treasure()
+p1.collect_treasure()
+p1.collect_treasure()
+p1.collect_treasure()
+p1.collect_treasure()
+p1.collect_treasure()
+p1.collect_treasure()
+p1.collect_treasure()
+print(p1)
+p1.collect_treasure()
 print(p1)
