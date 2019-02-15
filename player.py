@@ -32,10 +32,12 @@ class Player:
         if self.health_points < 1:
             self.lives -= 1
             self.health_points = 10
-            # if self.lives < 1:
-            #     self.restart()
+            if self.lives < 1:
+                self.restart()
 
     # The restart instance method should set all attributes back to their starting values (5, 0, and 10).
+    def restart(self):
+        self.__init__()
 
 p1 = Player()
 print(p1)
@@ -54,4 +56,10 @@ print(p1)
 p1.do_battle(5)
 print(p1)
 p1.do_battle(6)
+print(p1)
+p1.do_battle(11)
+p1.do_battle(11)
+p1.do_battle(11)
+p1.do_battle(11)
+p1.do_battle(11)
 print(p1)
