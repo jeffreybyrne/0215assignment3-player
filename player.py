@@ -9,8 +9,9 @@ class Player:
         self.health_points = health
         self.lives = lives
 
-# Define an __str__() instance method.
-
+    # Define an __str__() instance method.
+    def __str__(self):
+        return("This player currently has {} gold, {} health points, and {} lives remaining.".format(self.gold_coins,self.health_points))
 # Your class should have an instance method called level_up that increases lives by one.
 # Your class should have an instance method called collect_treasure that increases gold_coins by one. If gold_coins is a multiple of ten (eg, 10, 20, 30, and so on) then the collect_treasure method should run the level_up method.
 # Your class should have an instance method called do_battle that accepts one damage argument and subtracts it from the player's health_points. If health_points falls below one, subtract one from lives and reset health_points to ten. If you have run out of lives, this method should run another method called restart (see below).
